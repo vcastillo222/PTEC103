@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>ODIO A LOS GATOS </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="newcss1.css">
+    </head>
+    <body>
+        
+         <section id="home" class="home">
+        <div class="container">
+            <div class="casacum">
+                
+                <div class="casacom">
+                    <h1> pagina de odio
+                        a los gatos porque 
+                        son muy gatos y los gatos
+                        son la raza inferior 
+                        porque los gatos me dan
+                        alergia y los odio
+                        y quiero que se mueran<span class="highlight"> Culto de odio </span></h1>
+                </div>
+                <div class="gato">
+                    <img src=" https://th.bing.com/th/id/OIP.610B_PgKSf39mHNIGE8dBgHaFj?w=228&h=180&c=7&r=0&o=5&pid=1.7" alt="el enemigo mortal"
+                    class="gate">
+                </div>
+            </div>
+        </div>
+    </section>
+
+        
+        
+        
+        
+        
+        
+        <section id ="cosa" class="cosa">
+    <div class="container">
+
+  <div class="row">
+      
+      <h3>RAZONES DEL ODIO</h3>
+    <div class="col-sm">
+                <div class="caca">
+                    <h3>pelo</h3>
+                    -<p>Los gatos  dan alergia
+                    y estornudas </p>
+                </div>
+    </div>
+    <div class="col-sm">
+                <div class="caca">
+                    <h3>Feos</h3>
+                    -<p>Los gatos son feos porque
+                       yo lo digo</p>
+                </div>
+    </div>
+    <div class="col-sm">
+                <div class="caca">
+                    <h3>Otras </h3>
+                    -<p>NOS LAVAN EL CEREBRO
+                    para que nos gusten
+                    los gatos...</p>
+                </div>
+    </div>
+  </div>
+       </div>    </section>
+        
+        
+        
+        
+        
+        <section id="perro" class="perro"> 
+            <div class="container">
+  <div class="row">
+      <h3>nuestra causa</h3>
+    <div class="col-sm">
+      ¿Odias a los gatos? 
+    </div>
+    <div class="col-sm">
+      ¿Quieres ilegalizar los gatos?
+    </div>
+    <div class="col-sm">
+      únete a nuestra causa
+    </div>
+  </div>
+</div>
+        </section>
+        
+        
+        
+        
+        
+        <div class="container">
+  <div class="row">
+      
+      <h3>nuestras redes</h3>
+    <div class="col">
+      cara de libro
+    </div>
+    <div class="col">
+      instagram 
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      correo de gogle
+    </div>
+    <div class="col">
+      twiter 
+    </div>
+    <div class="col">
+      gato ensalada 
+    </div>
+  </div>
+</div>
+        
+        
+        
+        
+        
+    </body>
+</html>
