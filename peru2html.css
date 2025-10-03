@@ -1,0 +1,68 @@
+/* Contacts page CSS */
+
+
+nav{
+    background: #c8102e !important;
+    height: 80px;
+    width: 100%;
+}
+
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+}
+
+.logo{
+    height: 40px;
+}
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: white;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+li a.active, li a:hover{
+    background: lightsalmon;
+    transition: .5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color: #c8102e;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+  
+
+
+    /* Contact sections */
+    section {
+      padding: 40px 20px;
+      border-bottom: 1px solid #cbd5e1;
+    }
+    section h2 {
+      margin-top: 0;
+      color: #334155;}
+
