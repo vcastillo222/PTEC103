@@ -1,0 +1,104 @@
+<?php
+session_start();
+include("d.php"); // Your database connection
+
+// Check if user is logged in
+if (!isset($_SESSION['username'])) {
+    // Redirect to login page
+    header("Location: forumab.php");
+    exit();
+}
+
+$username = $_SESSION['username'];
+
+// Get user's points from database
+$stmt = $conn->prepare("SELECT points FROM users WHERE username = ?");
+$stmt->bind_param("s", $username);
+$stmt->execute();
+$result = $stmt->get_result();
+$user_points = 0;
+if ($result && $result->num_rows === 1) {
+    $row = $result->fetch_assoc();
+    $user_points = (int)$row['points'];
+}
+$stmt->close();
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recompensas Perú</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="peru2html.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Include your CSS from the HTML you shared */
+        /* For brevity, copy your previous styles here */
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="#" class="enlace"><img src="logo.png" alt="" class="logo"></a>
+        <ul>
+            <li><a class="active" href="index.html">INICIO</a></li>
+            <li><a href="peru2html.html">Puntos</a></li>
+            <li><a href="premium.php">Menú VIP</a></li>
+            <li><a href="forumon.php">Foro Perú</a></li>
+            <li><a href="menu.php">Menu</a></li>
+            <li><a href="staff.php">STAFF</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="page">
+    <header class="hero">
+        <div class="brand">
+            <div class="flag"></div>
+            <div>
+                <h1>Recompensas Perú</h1>
+                <p>Gana puntos en cada compra — canjéalos por promociones locales</p>
+            </div>
+        </div>
+
+        <div class="login-area">
+            <div class="points-badge" title="Puntos actuales">
+                <span style="font-size:13px">Puntos:</span>
+                <strong id="points-display"><?php echo $user_points; ?></strong>
+            </div>
+
+            <a class="login-btn" href="logout.php">Cerrar sesión</a>
+        </div>
+    </header>
+
+    <!-- Your three-column images and reward grid here -->
+    <!-- Copy your HTML from the previous page -->
+
+</div>
+
+<script>
+(function(){
+    const pointsDisplay = document.getElementById('points-display');
+    const userPoints = <?php echo $user_points; ?>;
+
+    document.querySelectorAll('.redeem').forEach(btn=>{
+        btn.addEventListener('click', function(e){
+            const cost = parseInt(this.getAttribute('data-cost'));
+            if(userPoints < cost){
+                alert('No tienes suficientes puntos para canjear ' + cost + ' puntos.');
+                return;
+            }
+            if(confirm('¿Deseas canjear ' + cost + ' puntos?')){
+                window.location.href = 'redeem.php?cost=' + cost;
+            }
+        });
+    });
+})();
+</script>
+</body>
+</html>
